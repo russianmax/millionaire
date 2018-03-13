@@ -12,4 +12,3 @@ def intro():
    print "2. Phone a Friend" + "\n" + "Place a call to a predetermined friend that will hopefully help you with an answer."
    print "3. Ask the Audience" + "\n" "Our wonderful people (bots) in the audience will vote on the correct answer and we shall show you the results"
    print "Ready to get started? Lets go!" + "\n" + "==================================================================="
-intro()
