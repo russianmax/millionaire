@@ -4,6 +4,9 @@
 # Michael Hubem: 15396501
 # Matthew Farrelly: 15366246
 
+import sys
+import random
+
 def intro():
    name = raw_input("Hello, welcome to Who Wants to be a Millionaire! What is your name?" + "\n")
    print "Ok " + name + " this is how the game works:" + "\n"
@@ -13,38 +16,3 @@ def intro():
    print "3. Ask the Audience" + "\n" "Our wonderful people (bots) in the audience will vote on the correct answer and we shall show you the results"
    print "Ready to get started? Lets go!" + "\n" + "==================================================================="
 
-
-answerlist = ["A","B","C","D", "Correct"]
-answerdict = {}
-f = open("question.txt")
-for lines in f.readlines():
-    #print (lines)
-    parse = lines.split('[')
-    answer = parse[1]
-    questions = parse[0]
-    answers = parse[1].strip("\n").split(",")
-    print(questions)
-    #print(answer)
-    i = 0
-    while i < 5:
-        answerdict[answerlist[i]] = answers[i]
-        i = i + 1
-    print("A: " + answerdict["A"])
-    print("B: " + answerdict["B"])
-    print("C: " + answerdict["C"])
-    print("D: " + answerdict["D"])
-
-    select = raw_input("Select your answer:\n")
-    if select in answerdict:
-        if answerdict[select] == answerdict["Correct"] and select != "Correct":
-            print("Thats correct")
-        else:
-            print("Thats not correct")
-	    break
-	
-    else:
-        if select == answerdict["Correct"]:
-            print("Thats correct")
-        else:
-            print ("Thats not correct") 
-	    break
