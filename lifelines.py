@@ -3,6 +3,12 @@ import time
 name = raw_input("Please enter your name:\n")
 
 answerlist = ["A","B","C","D", "Correct"]
+f = open("money.txt")
+for money in f.readlines():
+	money = money.strip("\n").split(".")
+	
+
+
 
 #open randon random line in file
 j = 0
@@ -13,7 +19,7 @@ while i <= 16:
 	question = lines[0]
 	answers = lines[1].strip("\n").split(',')
 
-	print 'Question:', i 
+	print 'Question:',i, money[i]
 
 	print question
 	#time.sleep(3)
@@ -37,7 +43,8 @@ while i <= 16:
 	'A' : answers[0],
 	'B' : answers[1],
 	'C' : answers[2],
-	'D' : answers[3],
+	'D' : answers[3]
+			,
 
 	}
 	#print answers[4]
@@ -72,11 +79,11 @@ while i <= 16:
 		#time.sleep(1)
 		print "We will select two answers to remove"
 		print "Leaving you with one correct and one incorrect answer"
-		print "for " " please select the correct answer" 
+		print "Remember this questuon is for", money[i], ",", "please select the correct answer" 
 		#add money counter 
 		#time.sleep(1)
-		print answers[5] 
-		print answers[6]
+		print answers[5], "or", answers[6]
+		
 		lifeline1 = raw_input("Chris Tarrent: Please select an answer " + name + "\n")
 		select = lifeline1.upper()
 		 
