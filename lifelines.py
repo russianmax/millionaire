@@ -48,14 +48,14 @@ while i <= 16:
 
 	#Phone a friend
 	if select == "2":
-		print "Phone a friend"
-		time.sleep(1)
+		print "Lifeline: Phone a friend"
+		#time.sleep(1)
 		friend = raw_input("Please enter the name of the person yout want to ring " + name + ":\n")
 		print "...dialling " + friend + "... "
-		time.sleep(2)
+		#time.sleep(2)
 		print "Hi " + friend + " it's Chris Tarrent here, " + name + " needs your help!"
 		print "Can you help " + name + " by answering this question"
-		time.sleep(1)
+		#time.sleep(1)
 		print question
 		print 'A: ' + answers[0]
 		print 'B: ' + answers[1]
@@ -66,6 +66,20 @@ while i <= 16:
 		select = lifeline2.upper()
 		 
 		#phone a friend
+
+	if select == "1":
+		print "Lifeline: 50/50"
+		#time.sleep(1)
+		print "We will select two answers to remove"
+		print "Leaving you with one correct and one incorrect answer"
+		print "for " " please select the correct answer" 
+		#add money counter 
+		#time.sleep(1)
+		print answers[5] 
+		print answers[6]
+		lifeline1 = raw_input("Chris Tarrent: Please select an answer " + name + "\n")
+		select = lifeline1.upper()
+		 
 	
 	if select in answerdict:
 		if answerdict[select] == answers[4]:
